@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var customerRoutes = require("./routes/customerRoutes");
 var benificiaryRoutes = require("./routes/benificiaryRoutes");
@@ -30,4 +32,4 @@ app.post('/test', function(req, res){
   res.json("ok");
 });
 
-var server = app.listen(80);
+var server = app.listen(process.env.PORT);

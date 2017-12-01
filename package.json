@@ -1,8 +1,13 @@
 {
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
   "dependencies": {
     "angular2": "2.0.0-beta.0",
     "body-parser": "^1.14.2",
     "bootstrap": "^3.3.6",
+    "dotenv": "^4.0.0",
     "ejs": "^2.3.4",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",

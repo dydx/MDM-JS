@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-var urlDatabase = 'mongodb://michwii:Elyeshm1806@ds027335.mongolab.com:27335/prince';
+var urlDatabase = process.env.MONGO_URL;
 
 var connection = mongoose.connection;
 if(!connection.readyState){
-	connection = mongoose.connect(urlDatabase);
+	connection = mongoose.connect(urlDatabase, { useMongoClient: true });
 }
 
 var Schema = mongoose.Schema,
